@@ -1,0 +1,16 @@
+file = '5.txt'  
+ action = input("Р’РІРµРґРёС‚Рµ РѕС‚ 'Р°' РґРѕ 'Рґ': ").lower() #Р° Р± РІ Рі Рґ 
+ with open(file) as f:
+     data = f.readlines()
+  
+ if action == 'Р°':
+     print(*data[0])
+ elif action == 'Р±':
+     print(*data[4])
+ elif action == 'РІ':
+     print(*data[0:4])
+ elif action == 'Рі':
+     s1, s2 = map(int, input('Р’РІРµРґРёС‚Рµ s1 Рё s2 С‡РµСЂРµР· РїСЂРѕР±РµР»: ').split())
+     print(*data[s1-1 : s2-1])
+ elif action == 'Рґ':
+     print(*data)
